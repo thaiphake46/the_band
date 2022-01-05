@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.main {
+
+}
+
+.header {
+    z-index: 1;
+    width: 100%;
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header .search-btn:hover i{
+    background-color: red;
+    cursor: pointer;
+}
+
+.header .search-btn i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 24px;
+    font-weight: bolder;
+    color: #fff;
+    line-height: 46px;
+    display: inline-block;
+}
+
+.nav {
+    display: inline-block;
+}
+
+.nav .arr-down {
+    font-size: 12px;
+}
+
+.nav li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    text-transform: uppercase;
+}
+
+.nav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+    display: block;
+}
+
+.nav li:hover .sub-nav {
+    display: block;
+}
+
+.nav .sub-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.nav .sub-nav li {
+    background-color: #fff;
+    min-width: 160px;
+}
+
+.nav .sub-nav li:hover a {
+    background-color: #ccc;
+}
+
+.nav .sub-nav li a {
+    display: block;
+    color: #000;
+    line-height: 38px;
+    padding: 0 16px;
+    text-transform: capitalize;
+}
+
+.slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url('/assets/img/slider/chicago.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
+
+.slider .slider-content {
+    position: absolute;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+.slider .slider-heading {
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.slider .slider-text {
+    font-weight: bolder;
+}
+
+.content {
+    
+}
+
+.content .content-section {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 64px 16px;
+}
+
+.content .content-heading {
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin: 10px 0;
+}
+
+.content .content-sub {
+    opacity: 0.5;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+.content .band-about {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.content .bg-tour {
+    background-color: #000;
+}
+
+.footer {
+
+}
