@@ -14,6 +14,10 @@ html {
     color: #fff;
 }
 
+.clear {
+    clear: both;
+}
+
 .main {
 
 }
@@ -136,20 +140,22 @@ html {
 .content .content-section {
     width: 800px;
     margin: 0 auto;
-    text-align: center;
     padding: 64px 16px;
+    max-width: calc(100%-40px);
 }
 
 .content .content-heading {
     font-size: 30px;
     letter-spacing: 4px;
     margin: 10px 0;
+    text-align: center;
 }
 
 .content .content-sub {
     opacity: 0.5;
     font-style: italic;
     margin: 15px 0;
+    text-align: center;
 }
 
 .content .band-about {
@@ -157,8 +163,55 @@ html {
     line-height: 1.5;
 }
 
+.content .member-list {
+    padding: 32px 0;
+}
+
+.content .member-item {
+    float: left;
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.content .member-name {
+    margin: 15px 0;
+}
+
+.content .member-img {
+    width: 152px;
+    border-radius: 4px;
+}
+
 .content .bg-tour {
     background-color: #000;
+}
+
+.tour-time {
+    width: 100%;
+}
+
+.tour-time li {
+    list-style: none;
+    background-color: #fff;
+    color: #757575;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tour-time .soud-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 8px;
+    margin-left: 16px;
+}
+
+.tour-time .quantity {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 8px;
+    float: right;
+    margin: -3px;
 }
 
 .footer {
