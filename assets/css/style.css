@@ -10,12 +10,45 @@ html {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+/* common */
+.clear {
+    clear: both;
+}
+
 .text-white {
     color: #fff;
 }
 
-.clear {
-    clear: both;
+.text-center {
+    text-align: center;
+}
+
+.mg-bot-16 {
+    margin-bottom: 16px;
+}
+
+.pd-top-bot-32 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-half {
+    width: 50%;
 }
 
 .main {
@@ -141,7 +174,6 @@ html {
     width: 800px;
     margin: 0 auto;
     padding: 64px 16px;
-    max-width: calc(100%-40px);
 }
 
 .content .content-heading {
@@ -163,16 +195,6 @@ html {
     line-height: 1.5;
 }
 
-.content .member-list {
-    padding: 32px 0;
-}
-
-.content .member-item {
-    float: left;
-    width: calc(100%/3);
-    text-align: center;
-}
-
 .content .member-name {
     margin: 15px 0;
 }
@@ -186,11 +208,12 @@ html {
     background-color: #000;
 }
 
-.tour-time {
+.content .tour-info {
     width: 100%;
+    border-radius: 4px;
 }
 
-.tour-time li {
+.content .tour-info li {
     list-style: none;
     background-color: #fff;
     color: #757575;
@@ -198,14 +221,15 @@ html {
     border-bottom: 1px solid #ddd;
 }
 
-.tour-time .soud-out {
+.content .tour-info .soud-out {
+    float: right;
     background-color: #f44336;
     color: #fff;
     padding: 3px 8px;
-    margin-left: 16px;
+    margin-top: -3px;
 }
 
-.tour-time .quantity {
+.content .tour-info .quantity {
     background-color: #000;
     color: #fff;
     padding: 3px 8px;
@@ -214,6 +238,116 @@ html {
     margin: -3px;
 }
 
+.content .tour-tickets {
+    padding: 32px 0;
+}
+
+.content .tour-img {
+    width: 100%;
+    display: block;
+}
+
+.content .tour-img:hover {
+    opacity: 0.5;
+}
+
+.content .tour-about {
+    padding: 16px;
+    background-color: #fff;
+
+}
+
+.content .tour-location {
+    font-weight: bolder;
+}
+
+.content .tour-date {
+    opacity: 0.7;
+}
+
+.content .tour-buy-tickets {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    padding: 10px 16px;
+}
+
+.content .tour-buy-tickets:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
 .footer {
 
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-container {
+    position: relative;
+    background-color: #fff;
+    width: 900px;
+    min-height: 100px;
+}
+
+.modal .modal-close i {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px;
+    font-weight: bolder;
+}
+
+.modal .modal-close:hover i {
+    background-color: red;
+    cursor: pointer;
+}
+
+.modal header {
+    font-size: 32px;
+    color: #fff;
+    height: 132px;
+    background-color: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 3px;
+}
+
+.modal header i {
+    font-weight: bolder;
+    margin-top: -8px;
+    margin-right: 16px;
+}
+
+.modal .modal-body {
+    padding: 16px;
+}
+
+.modal .modal-body label {
+    opacity: 0.7;
+}
+
+.modal .modal-body label i {
+    font-weight: bolder;
+}
+
+.modal .modal-input {
+    display: block;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0 20px;
 }
