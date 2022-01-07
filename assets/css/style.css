@@ -174,6 +174,7 @@ html {
     width: 800px;
     margin: 0 auto;
     padding: 64px 16px;
+    max-width: fit-content;
 }
 
 .content .content-heading {
@@ -266,6 +267,7 @@ html {
 }
 
 .content .tour-buy-tickets {
+    border: none;
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -289,7 +291,7 @@ html {
     bottom: 0;
     left: 0;
     background: rgba(0,0,0,0.4);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -299,9 +301,13 @@ html {
     background-color: #fff;
     width: 900px;
     min-height: 100px;
+    margin: 0 24px;
+    animation: modaFadeIn ease 0.5s;
 }
 
-.modal .modal-close i {
+.modal .modal-close {
+    border: none;
+    background-color: #009688;
     color: #fff;
     position: absolute;
     top: 0;
@@ -310,7 +316,7 @@ html {
     font-weight: bolder;
 }
 
-.modal .modal-close:hover i {
+.modal .modal-close:hover{
     background-color: red;
     cursor: pointer;
 }
@@ -350,4 +356,42 @@ html {
     width: 100%;
     padding: 8px;
     margin: 8px 0 20px;
+}
+.modal #buy-tickets i {
+    font-weight: bolder;
+}
+
+.modal #buy-tickets {
+    background-color: #009688;
+    border: none;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 17px;
+}
+
+.modal #buy-tickets:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.modal .modal-footer {
+    float: right;
+    padding-right: 16px;
+    padding-bottom: 16px;
+}
+
+.modal-open {
+    display: flex;
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
 }

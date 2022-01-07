@@ -76,7 +76,7 @@
                             <div class="tour-about">
                                 <div class="tour-location mg-bot-16">New York</div>
                                 <div class="tour-date mg-bot-16">Fri 27 Nov 2016</div>
-                                <a href="#" class="tour-buy-tickets">Buy Tickets</a>
+                                <button class="tour-buy-tickets js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
 
@@ -85,7 +85,7 @@
                             <div class="tour-about">
                                 <div class="tour-location mg-bot-16">Paris</div>
                                 <div class="tour-date mg-bot-16">Sat 28 Nov 2016</div>
-                                <a href="#" class="tour-buy-tickets">Buy Tickets</a>
+                                <button class="tour-buy-tickets js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
 
@@ -94,7 +94,7 @@
                             <div class="tour-about">
                                 <div class="tour-location mg-bot-16">San Francisco</div>
                                 <div class="tour-date mg-bot-16">Sun 29 Nov 2016</div>
-                                <a href="#" class="tour-buy-tickets">Buy Tickets</a>
+                                <button class="tour-buy-tickets js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -115,11 +115,12 @@
         </div>
     </div>
 
-    <div class="modal">
+    <div class="modal js-modal">
         <div class="modal-container">
-            <div class="modal-close">
-                <i class="ti-close"></i>
-            </div>
+            <button class="modal-close js-modal-close">
+                <i class="ti-close "></i>
+            </button>
+            <div class="clear"></div>
 
             <header class="modal-header">
                 <i class="ti-bag"></i>
@@ -144,9 +145,29 @@
             </div>
 
             <div class="modal-footer">
-                <p class="modal-help">Need <a href="">help</a></p>
+                <p class="modal-help">Need <a href="">help ?</a></p>
             </div>
         </div>
     </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-tickets');
+        const modal = document.querySelector('.js-modal')
+        const modalClose = document.querySelector('.js-modal-close')
+
+        function showBuyTickets(){
+            modal.classList.add('modal-open')
+        }
+
+        function hideBuyTickets(){
+            modal.classList.remove('modal-open')
+        }
+        
+        for(const buyBtn of buyBtns){
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+        
+        modalClose.addEventListener('click', hideBuyTickets)
+    </script>
 </body>
 </html>
