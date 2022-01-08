@@ -55,7 +55,6 @@
                         <p class="member-name">Name</p>
                         <img class="member-img" src="./assets/img/the_band_team/bandmember.jpg" alt="">
                     </div>
-                    <div class="clear"></div>
                 </div>
             </div>
 
@@ -97,7 +96,6 @@
                                 <button class="tour-buy-tickets js-buy-tickets">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
@@ -106,8 +104,32 @@
             <div class="content-section">
                 <div class="content-heading">CONTACT</div>
                 <div class="content-sub">Fan? Drop a note!</div>
+                <form class="row contact-form">
+                    <div class="col col-half mg-top-4">
+                        <p class="contact-info"><i class="ti-location-pin"></i> Chicago, US</p>
+                        <p class="contact-info"><i class="ti-mobile"></i> Phone: +00 151515</p>
+                        <p class="contact-info"><i class="ti-email"></i> Email: mail@mail.com</p>
+                    </div>
+                    <div class="col col-half">
+                        <div class="row">
+                            <div class="col col-half">
+                                <input type="text" name="" placeholder="Name" id="" required class="form-ctrl col-full">
+                            </div>
+                            <div class="col col-half">
+                                <input type="email" name="" placeholder="Email" id="" required class="form-ctrl col-full">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-full">
+                                <input type="text" name="" placeholder="Message" id="" class="form-ctrl col-full">
+                            </div>
+                        </div>
+                        <input type="submit" value="SEND" required class="form-ctrl-send">
+                    </div>
+                </form>
             </div>
 
+            <div class="content-map"></div>
         </div>
 
         <div class="footer">
@@ -116,11 +138,11 @@
     </div>
 
     <div class="modal js-modal">
-        <div class="modal-container">
+        <div class="modal-container js-modal-container">
             <button class="modal-close js-modal-close">
                 <i class="ti-close "></i>
             </button>
-            <div class="clear"></div>
+            <div></div>
 
             <header class="modal-header">
                 <i class="ti-bag"></i>
@@ -154,7 +176,7 @@
         const buyBtns = document.querySelectorAll('.js-buy-tickets');
         const modal = document.querySelector('.js-modal')
         const modalClose = document.querySelector('.js-modal-close')
-
+        const modalContainer = document.querySelector('.js-modal-container')
         function showBuyTickets(){
             modal.classList.add('modal-open')
         }
@@ -168,6 +190,10 @@
         }
         
         modalClose.addEventListener('click', hideBuyTickets)
+        modal.addEventListener('click', hideBuyTickets)
+        modalContainer.addEventListener('click', function(event){
+            event.stopPropagation()
+        })
     </script>
 </body>
 </html>

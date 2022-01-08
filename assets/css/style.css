@@ -5,15 +5,16 @@
 
 }
 
-html {
+html, body {
+    line-height: 1.5;
     font-size: 15px;
     font-family: Helvetica, Arial, sans-serif;
 }
 
 /* common */
-.clear {
+/* .clear {
     clear: both;
-}
+} */
 
 .text-white {
     color: #fff;
@@ -21,6 +22,10 @@ html {
 
 .text-center {
     text-align: center;
+}
+
+.mg-top-4 {
+    margin-top: 4px;
 }
 
 .mg-bot-16 {
@@ -37,6 +42,12 @@ html {
     margin-right: -8px;
 }
 
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .col {
     float: left;
     padding-left: 8px;
@@ -49,6 +60,10 @@ html {
 
 .col-half {
     width: 50%;
+}
+
+.col-full {
+    width: 100%;
 }
 
 .main {
@@ -173,8 +188,9 @@ html {
 .content .content-section {
     width: 800px;
     margin: 0 auto;
-    padding: 64px 16px;
-    max-width: fit-content;
+    padding: 64px 0;
+    /* max-width: -webkit-fill-available; */
+    max-width: calc(100% - 32px);
 }
 
 .content .content-heading {
@@ -249,7 +265,7 @@ html {
 }
 
 .content .tour-img:hover {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .content .tour-about {
@@ -278,6 +294,42 @@ html {
 .content .tour-buy-tickets:hover {
     background-color: #ccc;
     color: #000;
+    cursor: pointer;
+}
+
+.content .contact-form {
+    margin: 47px 0 32px;
+}
+
+.content .form-ctrl {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 4px 0;
+}
+
+.content .contact-info{
+    font-size: 18px;
+}
+
+.content .contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.content .form-ctrl-send:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.content .form-ctrl-send {
+    float: right;
+    margin-top: 8px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 15px;
+    cursor: pointer;
 }
 
 .footer {
@@ -302,7 +354,8 @@ html {
     width: 900px;
     min-height: 100px;
     margin: 0 24px;
-    animation: modaFadeIn ease 0.5s;
+    /* transform: translateY(-100px); */
+    animation: modalFadeIn ease 0.8s;
 }
 
 .modal .modal-close {
@@ -388,7 +441,7 @@ html {
 
 @keyframes modalFadeIn {
     from {
-        transform: translateY(-100px);
+        transform: translateY(-227px);
     }
 
     to {
