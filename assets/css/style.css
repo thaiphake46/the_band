@@ -9,6 +9,7 @@ html, body {
     line-height: 1.5;
     font-size: 15px;
     font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
 .pull-right {
@@ -97,19 +98,21 @@ html, body {
     position: fixed;
     top: 0;
     width: 100%;
+    overflow: hidden;
 }
 
+.header .mobile-menu-btn:hover i,
 .header .search-btn:hover i{
     background-color: red;
     cursor: pointer;
 }
-
+.header .mobile-menu-btn i,
 .header .search-btn i {
     position: absolute;
     top: 0;
     right: 0;
     padding: 0 24px;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     color: #fff;
     line-height: 46px;
     display: inline-block;
@@ -209,10 +212,10 @@ html, body {
 
 .content .content-section {
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 64px 0;
+    padding: 64px 16px;
     /* max-width: -webkit-fill-available; */
-    max-width: calc(100% - 32px);
 }
 
 .content .content-heading {
@@ -340,6 +343,7 @@ html, body {
 .footer {
     text-align: center;
     width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 64px 0;
 }
