@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>The Band</title>
 </head>
+
 <body>
     <div class="main">
+        <!-- begin header -->
         <div class="header">
             <ul class="nav">
                 <li><a href="#">Home</a></li>
@@ -29,6 +31,7 @@
             <div class="search-btn"><i class="ti-search"></i></div>
         </div>
 
+        <!-- begin slider -->
         <div class="slider">
             <div class="slider-content">
                 <div class="slider-heading">Chicago</div>
@@ -37,7 +40,7 @@
         </div>
 
         <div class="content">
-            <!-- band -->
+            <!-- band member-->
             <div class="content-section">
                 <div class="content-heading">THE BAND</div>
                 <div class="content-sub">We love music</div>
@@ -100,7 +103,7 @@
                 </div>
             </div>
 
-            <!-- contact -->
+            <!-- contact form -->
             <div class="content-section">
                 <div class="content-heading">CONTACT</div>
                 <div class="content-sub">Fan? Drop a note!</div>
@@ -129,11 +132,13 @@
                 </form>
             </div>
 
+            <!-- map -->
             <div class="content-map">
                 <img src="./assets/img/map/map.jpg" alt="Map">
             </div>
         </div>
 
+        <!-- footer -->
         <div class="footer">
             <ul>
                 <li><i class="ti-facebook"></i></li>
@@ -147,6 +152,7 @@
         </div>
     </div>
 
+    <!-- modal buy tickets btn -->
     <div class="modal js-modal">
         <div class="modal-container js-modal-container">
             <button class="modal-close js-modal-close">
@@ -182,6 +188,7 @@
         </div>
     </div>
 
+    <!-- modal buy tickets btn script -->
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-tickets');
         const modal = document.querySelector('.js-modal')
