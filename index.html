@@ -190,6 +190,7 @@
             </div>
         </div>
     </div>
+
     <!-- mobile menu btn -->
     <script>
         var header = document.querySelector('.js-header')
@@ -199,6 +200,7 @@
         //  dong mo mobile menu
         mobileMenu.onclick = function () {
             var isClose = header.clientHeight === headerHeight
+            
             if(isClose){
                 header.style.height = 'auto'
             }
@@ -213,7 +215,14 @@
             var menuItem = menuItems[i]
             
             menuItem.onclick = function () {
-                header.style.height = null
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('sub-nav')
+
+                if(isParentMenu) {
+                    event.preventDefault()
+                }
+                else {
+                    header.style.height = null
+                }
             }
         }
     </script>
