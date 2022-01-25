@@ -47,6 +47,10 @@ html, body {
     margin-top: 8px;
 }
 
+.mg-top-16 {
+    margin-top: 16px;
+}
+
 .mg-bot-16 {
     margin-bottom: 16px;
 }
